@@ -1,20 +1,5 @@
 #include "sort.h"
 
-/**
- * quick_sort - Implementation of Quicksort algorithm
- * @array: pointer to array of integers
- * @size: size of array
- *
- * Return: Void
- */
-
-void quick_sort(int *array, size_t size)
-{
-	if (size < 2)
-		return;
-
-	partition(array, 0, (int)size - 1, size);
-}
 
 /**
  * partition - creates partition and sorts recursively
@@ -68,4 +53,20 @@ void array_swap(int *array, int a, int b)
 	temp = array[a];
 	array[a] = array[b];
 	array[b] = temp;
+}
+
+/**
+ * quick_sort - Implementation of Quicksort algorithm
+ * @array: pointer to array of integers
+ * @size: size of array
+ *
+ * Return: Void
+ */
+
+void quick_sort(int *array, size_t size)
+{
+	if (size < 2)
+		return;
+
+	partition(array, 0, (int)size - 1, size);
 }
