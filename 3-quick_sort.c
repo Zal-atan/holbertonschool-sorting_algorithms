@@ -1,5 +1,22 @@
 #include "sort.h"
 
+/**
+ * array_swap - swaps two integers in an array
+ * @array: array to be sorted
+ * @a: index of first integer
+ * @b: index of second integer
+ *
+ * Return: Void
+ */
+
+void array_swap(int *array, int a, int b)
+{
+	int temp;
+
+	temp = array[a];
+	array[a] = array[b];
+	array[b] = temp;
+}
 
 /**
  * partition - creates partition and sorts recursively
@@ -37,23 +54,6 @@ void partition(int *array, int low, int high, size_t size)
 	partition(array, j + 1, high, size);
 }
 
-/**
- * array_swap - swaps two integers in an array
- * @array: array to be sorted
- * @a: index of first integer
- * @b: index of second integer
- *
- * Return: Void
- */
-
-void array_swap(int *array, int a, int b)
-{
-	int temp;
-
-	temp = array[a];
-	array[a] = array[b];
-	array[b] = temp;
-}
 
 /**
  * quick_sort - Implementation of Quicksort algorithm
