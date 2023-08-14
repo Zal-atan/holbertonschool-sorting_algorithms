@@ -3,7 +3,7 @@
 /**
  * insertion_sort_list - sorts in ascending order using insertion
  *
- * @list - doubly linked list holding value of the array
+ * @list: doubly linked list holding value of the array
  */
 void insertion_sort_list(listint_t **list)
 {
